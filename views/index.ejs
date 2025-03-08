@@ -3,6 +3,10 @@
 </head>
 <html>
   <body>
-    <%- include('message', { messages: messages }) %>
+    <% messages.forEach(message => { %>
+    <p><%= message.text %></p>
+    <p><%= message.user %></p>
+    <p><%= message.added %></p>
+    <% }) %>
   </body>
 </html>
