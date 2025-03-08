@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const newRouter = Router();
 
-newRouter.get('/new', (req, res) => res.send('new'));
+newRouter.get('/', (req, res) => res.send('new'));
 
 module.exports = newRouter;
