@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <% messages.forEach(message => { %>
-    <ul>
-      <li><%= message.text %></li>
-      <li><%= message.user %></li>
-      <li><%= message.added %></li>
-    </ul>
-    <a href="/details/<%= message.id %>">Details</a>
-    <% }) %>
+    <div class="all-messages">
+      <% messages.forEach(message => { %>
+      <a href="/details/<%= message.id %>">
+        <div class="new-message">
+          <ul>
+            <li><%= message.text %></li>
+            <li><%= message.user %></li>
+            <li><%= message.added %></li>
+          </ul>
+        </div>
+      </a>
+      <% }) %>
+    </div>
 
     <a href="/new">Add Message</a>
   </body>
