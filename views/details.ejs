@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <ul>
-      <li><%= detail.text %></li>
-      <li><%= detail.user %></li>
-      <li><%= detail.added %></li>
-    </ul>
-    <a href="/">return</a>
+    <div class="details">
+      <h1>Message Details</h1>
+      <h3><%= detail.text %></h3>
+      <p><%= detail.user %></p>
+      <p><%= detail.added %></p>
+    </div>
+    <a class="return" href="/"
+      ><img src="/assets/backspace.svg" alt="backspace"
+    /></a>
   </body>
 </html>

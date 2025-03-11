@@ -1,13 +1,26 @@
-<head>
-  <title><%= title %></title>
-</head>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
   <body>
-    <h1>Add New Message</h1>
-    <form method="post" action="/new">
-      <input type="text" name="messageUser" placeholder="name" />
-      <input type="text" name="messageText" placeholder="text" />
-      <button>submit</button>
-    </form>
+    <div class="add-message-page">
+      <h1>Add New Message</h1>
+      <form method="post" action="/new">
+        <input type="text" name="messageUser" placeholder="name" />
+        <textarea
+          name="messageText"
+          id="messageText"
+          placeholder="text"
+        ></textarea>
+        <button>submit</button>
+      </form>
+    </div>
+    <a class="return" href="/"
+      ><img src="/assets/backspace.svg" alt="backspace"
+    /></a>
   </body>
 </html>

@@ -11,16 +11,14 @@
       <% messages.forEach(message => { %>
       <a href="/details/<%= message.id %>">
         <div class="new-message">
-          <ul>
-            <li><%= message.text %></li>
-            <li><%= message.user %></li>
-            <li><%= message.added %></li>
-          </ul>
+          <h1><%= message.text %></h1>
+          <p><%= message.user %></p>
+          <p><%= message.added %></p>
         </div>
       </a>
       <% }) %>
     </div>
 
-    <a href="/new">Add Message</a>
+    <a class="add-message" href="/new">+</a>
   </body>
 </html>
