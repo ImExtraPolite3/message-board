@@ -1,6 +1,8 @@
 const { Router } = require('express');
 const indexRouter = Router();
 const messages = require('../allMessages');
+const getDate = new Date().toString();
+const convertDate = getDate.substring(0, 24);
 let num = 3;
 
 indexRouter.get('/', (req, res) =>
@@ -13,7 +15,7 @@ indexRouter.post('/new', (req, res) => {
     id: num,
     text: messageText,
     user: messageUser,
-    added: new Date(),
+    added: convertDate,
   });
   num++;
   res.redirect('/');
