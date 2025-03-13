@@ -10,11 +10,12 @@
     <div class="add-message-page">
       <h1>Add New Message</h1>
       <form method="post" action="/new">
-        <input type="text" name="messageUser" placeholder="name" />
+        <input type="text" name="messageUser" placeholder="name" required />
         <textarea
           name="messageText"
           id="messageText"
           placeholder="text"
+          required
         ></textarea>
         <button>submit</button>
       </form>
